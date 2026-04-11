@@ -3,74 +3,57 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Status Saver – Video Saver – Privacy Policy</title>
-    <meta
-      name="description"
-      content="Privacy Policy for Status Saver – Video Saver (WhatsApp Status Saver)."
-    />
+    <title>Privacy Policy – Status Saver &amp; Video Saver</title>
+    <meta name="description" content="Privacy Policy for Status Saver – Video Saver. Learn how we handle your data when using our WhatsApp Status Saver app." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <style>
       :root {
-        --bg: #0f171e;
-        --panel: #121f2a;
-        --text: #e8eef6;
-        --muted: #a0aab4;
+        --bg: #0b1117;
+        --surface: #111922;
+        --surface2: #16202b;
+        --surface3: #1c2a38;
+        --text: #e2eaf4;
+        --muted: #7a8898;
         --accent: #b26dff;
-        --border: rgba(255, 255, 255, 0.08);
-        --shadow: rgba(0, 0, 0, 0.35);
-        --link: #b26dff;
+        --accent-dim: rgba(89, 42, 144, 0.12);
+        --border: rgba(255, 255, 255, 0.07);
+        --green: #22c55e;
+        --red: #ef4444;
+        --shadow: 0 4px 24px rgba(0,0,0,0.4);
       }
 
-      * {
-        box-sizing: border-box;
-      }
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+
       body {
-        margin: 0;
-        font-family:
-          system-ui,
-          -apple-system,
-          Segoe UI,
-          Roboto,
-          Helvetica,
-          Arial,
-          "Apple Color Emoji",
-          "Segoe UI Emoji";
-        background:
-          radial-gradient(
-            1200px 600px at 10% 0%,
-            rgba(178, 109, 255, 0.1),
-            transparent 60%
-          ),
-          radial-gradient(
-            900px 500px at 100% 10%,
-            rgba(178, 109, 255, 0.08),
-            transparent 55%
-          ),
-          var(--bg);
+        font-family: 'Inter', system-ui, sans-serif;
+        background: var(--bg);
         color: var(--text);
-        line-height: 1.55;
+        line-height: 1.65;
+        font-size: 15px;
       }
 
-      a {
-        color: var(--link);
-        text-decoration: none;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-
+      /* ── Sticky Header ── */
       header {
         position: sticky;
         top: 0;
-        backdrop-filter: blur(10px);
-        background: rgba(15, 23, 30, 0.72);
+        z-index: 100;
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        background: rgba(11,17,23,0.82);
         border-bottom: 1px solid var(--border);
-        z-index: 10;
       }
 
-      .wrap {
-        max-width: 980px;
+      .header-inner {
+        max-width: 900px;
         margin: 0 auto;
-        padding: 20px 16px;
+        padding: 14px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
       }
 
       .brand {
@@ -79,382 +62,499 @@
         gap: 12px;
       }
 
-      .logo {
+      .logo-wrap {
+        width: 44px;
+        height: 44px;
+        border-radius: 14px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        flex-shrink: 0;
+      }
+      .logo-wrap img { width: 100%; height: 100%; object-fit: cover; }
+
+      .brand-text h1 {
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--text);
+      }
+      .brand-text p {
+        font-size: 12px;
+        color: var(--muted);
+        margin-top: 1px;
+      }
+
+      .header-badges {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+
+      .badge {
+        background: var(--accent-dim);
+        border: 1px solid rgba(178,109,255,0.22);
+        color: var(--accent);
+        border-radius: 999px;
+        padding: 4px 12px;
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      /* ── Main Layout ── */
+      main {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 32px 24px 60px;
+      }
+
+      /* ── Hero ── */
+      .page-hero {
+        text-align: center;
+        padding: 20px 0 30px;
+      }
+
+      .page-hero .shield {
+        width: 72px;
+        height: 72px;
+        background: linear-gradient(135deg, #b26dff, #6a3db5);
+        border-radius: 24px;
+        margin: 0 auto 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 12px 36px rgba(178,109,255,0.3);
+      }
+
+      .page-hero .shield svg {
+        width: 40px; height: 40px; fill: #fff;
+      }
+
+      .page-hero h2 {
+        font-size: 26px;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .page-hero p { color: var(--muted); font-size: 15px; }
+
+      /* ── Section cards ── */
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 24px;
+        margin-bottom: 16px;
+        box-shadow: var(--shadow);
+      }
+
+      .card-header {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 18px;
+        padding-bottom: 14px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .card-icon {
         width: 40px;
         height: 40px;
         border-radius: 12px;
-        background: linear-gradient(
-          135deg,
-          rgba(178, 109, 255, 0.35),
-          rgba(178, 109, 255, 0.08)
-        );
-        display: grid;
-        place-items: center;
-        border: 1px solid var(--border);
-        box-shadow: 0 10px 30px var(--shadow);
-        flex: 0 0 auto;
-      }
-
-      .logo svg {
-        width: 22px;
-        height: 22px;
-      }
-
-      .logo img {
-        width: 100%;
-        height: 100%;
-        display: block;
-        object-fit: cover;
-        border-radius: inherit;
-      }
-
-      .title {
+        background: var(--accent-dim);
         display: flex;
-        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
       }
+      .card-icon svg { width: 22px; height: 22px; fill: var(--accent); }
 
-      .title h1 {
-        margin: 0;
-        font-size: 16px;
+      .card-title {
+        font-size: 17px;
         font-weight: 700;
-        letter-spacing: 0.2px;
-      }
-
-      .title p {
-        margin: 0;
-        font-size: 13px;
-        color: var(--muted);
-      }
-
-      main {
-        padding: 18px 0 40px;
-      }
-
-      .card {
-        background: rgba(18, 31, 42, 0.72);
-        border: 1px solid var(--border);
-        border-radius: 18px;
-        padding: 18px;
-        box-shadow: 0 14px 40px var(--shadow);
-      }
-
-      h2 {
-        margin: 18px 0 10px;
-        font-size: 18px;
-      }
-
-      h3 {
-        margin: 14px 0 8px;
-        font-size: 15px;
         color: var(--text);
       }
 
-      p {
-        margin: 10px 0;
-        color: var(--text);
-      }
-      .muted {
-        color: var(--muted);
+      .card-title .num {
+        color: var(--accent);
+        margin-right: 4px;
       }
 
-      ul {
-        margin: 10px 0 10px 18px;
-        padding: 0;
-      }
-      li {
-        margin: 6px 0;
-        color: var(--text);
-      }
+      p { color: var(--text); margin-bottom: 12px; }
+      p:last-child { margin-bottom: 0; }
+      p.muted { color: var(--muted); font-size: 13px; }
 
-      .pill {
-        display: inline-block;
-        padding: 4px 10px;
-        border-radius: 999px;
-        background: rgba(178, 109, 255, 0.12);
-        border: 1px solid rgba(178, 109, 255, 0.22);
-        color: var(--text);
-        font-size: 12px;
-        margin-right: 6px;
-      }
+      ul { padding-left: 20px; margin: 8px 0 12px; }
+      li { color: var(--text); margin-bottom: 8px; }
+      li strong { color: var(--text); }
 
-      .grid {
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+
+      /* ── Data rows ── */
+      .data-grid {
         display: grid;
-        grid-template-columns: 1fr;
         gap: 12px;
       }
 
-      @media (min-width: 860px) {
-        .grid {
-          grid-template-columns: 1fr 1fr;
-        }
+      @media (min-width: 640px) {
+        .data-grid { grid-template-columns: 1fr 1fr; }
       }
 
-      .box {
-        border: 1px solid var(--border);
-        background: rgba(15, 23, 30, 0.55);
+      .data-item {
+        background: var(--surface2);
+        border: 1px solid rgba(255,255,255,0.05);
+        border-radius: 14px;
+        padding: 14px;
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+      }
+
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        flex-shrink: 0;
+        margin-top: 5px;
+      }
+      .dot-purple { background: var(--accent); box-shadow: 0 0 8px rgba(178,109,255,0.5); }
+      .dot-green { background: var(--green); box-shadow: 0 0 8px rgba(34,197,94,0.4); }
+
+      .data-label { font-weight: 700; font-size: 14px; margin-bottom: 4px; }
+      .data-desc { font-size: 13px; color: var(--muted); line-height: 1.55; margin: 0; }
+
+      /* ── Do / Don't ── */
+      .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-top: 4px;
+      }
+
+      @media (max-width: 480px) {
+        .two-col { grid-template-columns: 1fr; }
+      }
+
+      .col-box {
+        background: var(--surface2);
         border-radius: 14px;
         padding: 14px;
       }
 
-      code {
-        background: rgba(0, 0, 0, 0.25);
-        padding: 2px 6px;
-        border-radius: 8px;
-        border: 1px solid var(--border);
-        color: var(--text);
+      .col-title {
+        font-size: 13px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .col-title.green { color: var(--green); }
+      .col-title.red { color: var(--red); }
+
+      .col-list { list-style: none; padding: 0; margin: 0; }
+      .col-list li {
+        font-size: 13px;
+        color: var(--muted);
+        margin-bottom: 7px;
+        display: flex;
+        gap: 8px;
+        margin-left: 0;
+      }
+      .col-list li::before { content: "•"; flex-shrink: 0; }
+      .col-list.green li::before { color: var(--green); }
+      .col-list.red li::before { color: var(--red); }
+
+      /* ── Permissions ── */
+      .perm-grid {
+        display: grid;
+        gap: 10px;
+        margin-top: 4px;
       }
 
+      @media (min-width: 640px) {
+        .perm-grid { grid-template-columns: 1fr 1fr; }
+      }
+
+      .perm-chip {
+        background: var(--surface2);
+        border: 1px solid rgba(255,255,255,0.05);
+        border-radius: 12px;
+        padding: 12px 14px;
+      }
+
+      .perm-name {
+        font-family: 'Courier New', monospace;
+        font-size: 12px;
+        color: var(--accent);
+        font-weight: 700;
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .perm-desc { font-size: 13px; color: var(--muted); margin: 0; }
+
+      /* ── Footer ── */
       footer {
-        padding: 16px 0 30px;
+        border-top: 1px solid var(--border);
+        margin-top: 16px;
+        padding-top: 20px;
+        text-align: center;
         color: var(--muted);
         font-size: 13px;
+        line-height: 1.8;
       }
 
-      .topnote {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-top: 10px;
-      }
-
-      .hr {
-        height: 1px;
-        background: var(--border);
-        margin: 18px 0;
+      .disclaimer-box {
+        background: var(--accent-dim);
+        border: 1px solid rgba(178,109,255,0.2);
+        border-radius: 14px;
+        padding: 14px;
+        margin-top: 16px;
+        font-size: 13px;
+        color: var(--muted);
+        text-align: center;
       }
     </style>
   </head>
+
   <body>
+
     <header>
-      <div class="wrap">
+      <div class="header-inner">
         <div class="brand">
-          <div class="logo" aria-hidden="true">
+          <div class="logo-wrap">
             <img src="logo_img.png" alt="Status Saver logo" />
           </div>
-          <div class="title">
-            <h1>Status Saver – Video Saver – Privacy Policy</h1>
-            <p class="muted">WhatsApp Status Saver (Images & Videos)</p>
+          <div class="brand-text">
+            <h1>Status Saver – Video Saver</h1>
+            <p>WhatsApp Status Saver &amp; Downloader</p>
           </div>
         </div>
-        <div class="topnote">
-          <span class="pill">Last updated: <strong>22 Feb 2026</strong></span>
-          <span class="pill"
-            >Contact:
-            <a href="mailto:ssnapstatus@gmail.com"
-              >ssnapstatus@gmail.com</a
-            ></span
-          >
+        <div class="header-badges">
+          <span class="badge">Updated: April 11, 2026</span>
+          <span class="badge"><a href="mailto:ssnapstatus@gmail.com" style="color:inherit;text-decoration:none;">ssnapstatus@gmail.com</a></span>
         </div>
       </div>
     </header>
 
-    <main class="wrap">
+    <main>
+
+      <!-- Hero -->
+      <div class="page-hero">
+        <div class="shield">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+        </div>
+        <h2>Privacy Policy</h2>
+        <p>We respect your privacy. Here is exactly what we collect, why, and how we protect it.</p>
+      </div>
+
+      <!-- Intro -->
       <div class="card">
         <p>
-          This Privacy Policy explains how
-          <strong>Status Saver – Video Saver</strong> ("we", "our", or "us")
-          collects, uses, and protects information when you use the Status Saver
-          – Video Saver mobile application (the "App").
+          This Privacy Policy explains how <strong>Status Saver – Video Saver</strong> ("we", "our", or "the App")
+          collects, uses, and protects your information when you use the app.
         </p>
         <p class="muted">
-          Status Saver – Video Saver is designed to help you view and save media
-          that is already stored on your device (such as WhatsApp status
-          images/videos) and to optionally save copies into your device gallery.
-        </p>
-
-        <div class="hr"></div>
-
-        <h2>1) Information We Collect</h2>
-        <div class="grid">
-          <div class="box">
-            <h3>Media access (on your device)</h3>
-            <p>
-              The App accesses media files on your device to show WhatsApp
-              status content and let you save it. We do
-              <strong>not</strong> upload your photos/videos to our servers.
-            </p>
-          </div>
-          <div class="box">
-            <h3>App data (local only)</h3>
-            <p>
-              The App stores some information locally on your device (for
-              example: viewed status state, your preferences, and saved items
-              index) to provide a better experience.
-            </p>
-          </div>
-        </div>
-
-        <h3>What we do NOT collect</h3>
-        <ul>
-          <li>
-            We do not ask for your WhatsApp messages, contacts, or account
-            password.
-          </li>
-          <li>
-            We do not collect your personal photos/videos for uploading to a
-            server.
-          </li>
-          <li>We do not sell your personal data.</li>
-        </ul>
-
-        <div class="hr"></div>
-
-        <h2>2) Permissions & Why We Need Them</h2>
-        <p>
-          Status Saver – Video Saver requests limited permissions only to
-          provide core features. The exact permissions depend on your Android
-          version.
-        </p>
-
-        <div class="grid">
-          <div class="box">
-            <h3>Media permissions</h3>
-            <ul>
-              <li>
-                <code>READ_MEDIA_IMAGES</code> (Android 13+): to read status
-                images on your device.
-              </li>
-              <li>
-                <code>READ_MEDIA_VIDEO</code> (Android 13+): to read status
-                videos on your device.
-              </li>
-              <li>
-                <code>READ_EXTERNAL_STORAGE</code> (Android 12 and below): to
-                read status media stored on your device.
-              </li>
-            </ul>
-            <p class="muted">
-              Without these permissions, the App cannot display WhatsApp
-              statuses.
-            </p>
-          </div>
-          <div class="box">
-            <h3>Notifications permission</h3>
-            <ul>
-              <li>
-                <code>POST_NOTIFICATIONS</code> (Android 13+): to show
-                notifications when new statuses are detected (if you enable
-                notifications).
-              </li>
-            </ul>
-            <p class="muted">
-              Notifications are optional. You can disable them anytime from the
-              App Settings.
-            </p>
-          </div>
-        </div>
-
-        <div class="hr"></div>
-
-        <h2>3) How We Use Information</h2>
-        <ul>
-          <li>
-            To display available WhatsApp status images/videos on your device.
-          </li>
-          <li>
-            To save selected statuses to your gallery or to a private in-app
-            vault (when you use the save feature).
-          </li>
-          <li>To show notifications about new statuses (only if enabled).</li>
-          <li>To improve app stability and performance.</li>
-        </ul>
-
-        <div class="hr"></div>
-
-        <h2>4) Ads</h2>
-        <p>
-          Status Saver – Video Saver may display advertisements (for example,
-          Google AdMob). Ad providers may collect certain information (such as
-          advertising identifiers) to serve relevant ads and measure
-          performance.
-        </p>
-        <p class="muted">
-          To learn more about how Google uses data, you can review Google's
-          policy:
-          <a
-            href="https://policies.google.com/technologies/partner-sites"
-            target="_blank"
-            rel="noopener"
-            >https://policies.google.com/technologies/partner-sites</a
-          >
-        </p>
-
-        <div class="hr"></div>
-
-        <h2>5) Data Sharing</h2>
-        <p>
-          We do not sell your data. We may share limited information only in
-          these cases:
-        </p>
-        <ul>
-          <li>
-            <strong>With service providers</strong> (e.g., ad services) as
-            needed to deliver their functionality.
-          </li>
-          <li><strong>For legal reasons</strong> if required by law.</li>
-        </ul>
-
-        <div class="hr"></div>
-
-        <h2>6) Data Storage & Security</h2>
-        <ul>
-          <li>
-            Status content is read from your device and saved to your device
-            only when you choose to save.
-          </li>
-          <li>We store basic preferences and state locally on your device.</li>
-          <li>
-            We take reasonable measures to protect the information we handle,
-            but no method is 100% secure.
-          </li>
-        </ul>
-
-        <div class="hr"></div>
-
-        <h2>7) Children's Privacy</h2>
-        <p>
-          Status Saver – Video Saver is not intended for children under 13. We
-          do not knowingly collect personal information from children.
-        </p>
-
-        <div class="hr"></div>
-
-        <h2>8) Changes to This Privacy Policy</h2>
-        <p>
-          We may update this Privacy Policy from time to time. Any changes will
-          be posted on this page with an updated "Last updated" date.
-        </p>
-
-        <div class="hr"></div>
-
-        <h2>9) Contact Us</h2>
-        <p>
-          If you have any questions or concerns about this Privacy Policy,
-          contact us at:
-          <a href="mailto:ssnapstatus@gmail.com">ssnapstatus@gmail.com</a>
-        </p>
-
-        <div class="hr"></div>
-
-        <p class="muted">
-          Disclaimer: Status Saver – Video Saver is an independent app. WhatsApp
-          is a trademark of WhatsApp LLC. Status Saver – Video Saver is not
-          affiliated with, endorsed by, or sponsored by WhatsApp.
+          The App helps you view and save WhatsApp &amp; WhatsApp Business statuses stored on your device.
+          It also provides a Direct Chat feature that lets you message any number without saving it as a contact.
         </p>
       </div>
 
-      <footer>
-        <div class="wrap" style="padding: 0">
-          <div class="muted">
-            &copy; <span id="y"></span> Status Saver – Video Saver. All rights
-            reserved.
+      <!-- 1. Data We Handle -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM6 20V4h6v5a1 1 0 0 0 1 1h5v10H6z"/></svg>
+          </div>
+          <span class="card-title"><span class="num">1.</span> Data We Handle</span>
+        </div>
+
+        <div class="data-grid">
+          <div class="data-item">
+            <div class="dot dot-purple"></div>
+            <div>
+              <div class="data-label">📸 Photos &amp; Videos</div>
+              <p class="data-desc">Read from your local WhatsApp status folders to display them in the app. Saved to your gallery only when you tap "Save". Never uploaded to our servers.</p>
+            </div>
+          </div>
+          <div class="data-item">
+            <div class="dot dot-purple"></div>
+            <div>
+              <div class="data-label">📱 Phone Number</div>
+              <p class="data-desc">Used only within the Direct Chat feature to open WhatsApp. Never stored, logged, or sent to us. Discarded from memory immediately after use.</p>
+            </div>
+          </div>
+          <div class="data-item">
+            <div class="dot dot-purple"></div>
+            <div>
+              <div class="data-label">📊 Advertising Data (AdMob)</div>
+              <p class="data-desc">Google AdMob may collect your Device Ad ID and interaction data to show and measure ads. This is governed by Google's privacy policy.</p>
+            </div>
+          </div>
+          <div class="data-item">
+            <div class="dot dot-green"></div>
+            <div>
+              <div class="data-label">⚙️ App Preferences</div>
+              <p class="data-desc">Language, dark mode, notification toggle — all stored locally on your device. Never sent to us.</p>
+            </div>
           </div>
         </div>
+      </div>
+
+      <!-- 2. We Do / Don't -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+          </div>
+          <span class="card-title"><span class="num">2.</span> Commitments to You</span>
+        </div>
+        <div class="two-col">
+          <div class="col-box">
+            <div class="col-title green">✅ We DO</div>
+            <ul class="col-list green">
+              <li>Display your WhatsApp &amp; WA Business statuses</li>
+              <li>Save chosen media to your device gallery</li>
+              <li>Notify you of new statuses (optional)</li>
+              <li>Show ads via Google AdMob</li>
+            </ul>
+          </div>
+          <div class="col-box">
+            <div class="col-title red">🚫 We DON'T</div>
+            <ul class="col-list red">
+              <li>Upload your photos or videos anywhere</li>
+              <li>Store or log phone numbers</li>
+              <li>Read your WhatsApp messages</li>
+              <li>Access your contacts</li>
+              <li>Sell your personal data</li>
+              <li>Track your location</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Permissions -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM12 17c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM9 8V6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9z"/></svg>
+          </div>
+          <span class="card-title"><span class="num">3.</span> Permissions Explained</span>
+        </div>
+
+        <div class="perm-grid">
+          <div class="perm-chip">
+            <span class="perm-name">READ_MEDIA_IMAGES / READ_MEDIA_VIDEO</span>
+            <p class="perm-desc">Android 13+: Required to read WhatsApp status images and videos from your device storage.</p>
+          </div>
+          <div class="perm-chip">
+            <span class="perm-name">READ_EXTERNAL_STORAGE</span>
+            <p class="perm-desc">Android 12 and below: Required to access status media on your device.</p>
+          </div>
+          <div class="perm-chip">
+            <span class="perm-name">WRITE_EXTERNAL_STORAGE</span>
+            <p class="perm-desc">Android 9 and below: Required to save statuses to your gallery.</p>
+          </div>
+          <div class="perm-chip">
+            <span class="perm-name">POST_NOTIFICATIONS</span>
+            <p class="perm-desc">Android 13+: Optional. Sends alerts when new statuses are available. Can be turned off anytime.</p>
+          </div>
+          <div class="perm-chip">
+            <span class="perm-name">INTERNET</span>
+            <p class="perm-desc">Required to display ads (Google AdMob) and check for app updates.</p>
+          </div>
+          <div class="perm-chip">
+            <span class="perm-name">MANAGE_EXTERNAL_STORAGE (Scoped)</span>
+            <p class="perm-desc">Only used to detect the WhatsApp status folder. No access to unrelated files.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Advertising -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+          </div>
+          <span class="card-title"><span class="num">4.</span> Advertising – Google AdMob</span>
+        </div>
+        <p>The App uses Google AdMob to display ads. Google may collect:</p>
+        <ul>
+          <li>Android Advertising ID</li>
+          <li>IP address and approximate location (country/region)</li>
+          <li>App interaction events (ad views, clicks)</li>
+        </ul>
+        <p class="muted">
+          We do not directly collect this data — Google does. Review Google's policy at:<br>
+          <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">
+            policies.google.com/technologies/partner-sites
+          </a>
+        </p>
+        <p class="muted">
+          To opt out of personalized ads: <strong>Google Settings → Ads → Delete Advertising ID</strong>.
+        </p>
+      </div>
+
+      <!-- 5. Data Sharing -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/></svg>
+          </div>
+          <span class="card-title"><span class="num">5.</span> Data Sharing</span>
+        </div>
+        <p>We do <strong>not</strong> sell your data. We share limited info only with:</p>
+        <ul>
+          <li><strong>Google AdMob</strong> – for displaying and measuring ads.</li>
+          <li><strong>Law enforcement</strong> – only if legally required.</li>
+        </ul>
+        <p class="muted">No other third parties receive your data.</p>
+      </div>
+
+      <!-- 6. Children -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+          </div>
+          <span class="card-title"><span class="num">6.</span> Children's Privacy</span>
+        </div>
+        <p>This App is not intended for children under 13 years of age. We do not knowingly collect personal information from children. If you believe your child has used the app and provided personal data, please contact us immediately.</p>
+      </div>
+
+      <!-- 7. Changes -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/></svg>
+          </div>
+          <span class="card-title"><span class="num">7.</span> Policy Changes</span>
+        </div>
+        <p>We may update this Privacy Policy periodically. Any changes will be posted on this page with a new "Last updated" date. We recommend checking back occasionally.</p>
+      </div>
+
+      <!-- 8. Contact -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </div>
+          <span class="card-title"><span class="num">8.</span> Contact Us</span>
+        </div>
+        <p>If you have any questions about this Privacy Policy, please contact us:</p>
+        <p>📧 <strong>Email:</strong> <a href="mailto:ssnapstatus@gmail.com">ssnapstatus@gmail.com</a></p>
+      </div>
+
+      <div class="disclaimer-box">
+        ⚠️ <strong>Disclaimer:</strong> Status Saver – Video Saver is an independent application.
+        WhatsApp is a trademark of WhatsApp LLC. This app is not affiliated with, endorsed by, or sponsored by WhatsApp.
+      </div>
+
+      <footer>
+        &copy; <span id="y"></span> Status Saver – Video Saver. All rights reserved.
       </footer>
+
     </main>
 
-    <script>
-      document.getElementById("y").textContent = new Date().getFullYear();
-    </script>
+    <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
   </body>
 </html>
